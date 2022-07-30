@@ -11,23 +11,23 @@
 <body>
   <h1>Speech to Hypertext</h1>
   
-    <div>
-        <i class="fa-solid fa-microphone fa-3x" id = "icon"></i>
-        <div id="onoff" class="toggle-btn">
-          <input id = "onoff-cb" type="checkbox" checked class="cb-value" />
-          <span class="round-btn"></span>
-        </div>
-    </div>
-    
-    <form id="lang-select" name = "form">
-      言語：<select name="langSelect" onchange = "SetLanguage()" >
-        <option value="ja">日本語</option>
-        <option value="en">English</option>
-      </select>
-    <form>
-    
+  <div>
+      <i class="fa-solid fa-microphone fa-3x" id = "icon"></i>
+      <div id="onoff" class="toggle-btn">
+        <input id = "onoff-cb" type="checkbox" checked class="cb-value" />
+        <span class="round-btn"></span>
+      </div>
+  </div>
+  
+  <form id="lang-select" name = "form">
+    言語：<select name="langSelect" onchange = "SetLanguage()" >
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+    </select>
+  <form>
+  
 
-    <div id="result"></div>
+  <div id="result"></div>
 
     <script src="tinysegmenter.js"></script>  
     <script src="./script.js"></script>

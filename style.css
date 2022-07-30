@@ -67,3 +67,8 @@
   margin-top: 15px;
   font-size: x-large;
 }
+
+h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}

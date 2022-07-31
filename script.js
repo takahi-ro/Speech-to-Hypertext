@@ -12,7 +12,7 @@ function SetLanguage(){
   let SetLangIndex = SetLang.selectedIndex;
   let SettingLang = SetLang.options[SetLangIndex].value;
   recognition.stop();
-  wikiLang = SettingLang == 'ja' ? 'ja' : 'en';
+  wikiLang = SettingLang;
   recognition.lang = SettingLang == "ja" ? 'ja-JP' : 'en-US';
 }
 

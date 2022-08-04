@@ -3,4 +3,4 @@ This web app makes your speech to hypertext linked to a certain page of Wikipedi
 
 話した言葉が、リアルタイムでハイパーテキスト（リンク先はWikipedia)として表示される.
 
-[ProtPediaに投稿しました](https://protopedia.net/prototype/3104)
+[ProtoPediaに投稿しました](https://protopedia.net/prototype/3104)

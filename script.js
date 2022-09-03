@@ -35,6 +35,7 @@ onoffcb.addEventListener('click', () => {
   }
 });
 
+//音声認識機能が途切れときに再開
 recognition.onend = function () {
   if (toggleBottonClass.contains('active')) {
     console.log('recognition restarted!');

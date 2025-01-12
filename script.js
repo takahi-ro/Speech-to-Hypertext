@@ -76,6 +76,6 @@ recognition.onresult = (event) => {
 const errorDiv = document.getElementById('error');
 recognition.onerror = (event) => {
   if(event.error == 'not-allowed'){
-    errorDiv.textContent = '音声認識が動作しない環境です。パソコンのChromeブラウザでお試しください。';
+    errorDiv.textContent = '音声認識が動作しない環境です。SafariかパソコンのChromeブラウザでお試しください。';
   }
 };

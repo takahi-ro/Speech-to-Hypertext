@@ -73,7 +73,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-#error {
+.error {
   color: red;
   padding: 5px;
 }

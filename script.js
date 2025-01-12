@@ -20,13 +20,13 @@ function SetLanguage(){
 const segmenter = new TinySegmenter();                
     
 // マイクのOnOffボタンを押した時の処理
-const onoffcb = document.getElementById('onoff-cb');
-const toggleBotton = document.getElementById('onoff');
-const toggleBottonClass = toggleBotton.classList;
+const onOffCb = document.getElementById('onoff-cb');
+const toggleButton = document.getElementById('onoff');
+const toggleButtonClass = toggleButton.classList;
 
-onoffcb.addEventListener('click', () => {
-  const parent = onoffcb.parentElement;
-  if(onoffcb.checked){
+onOffCb.addEventListener('click', () => {
+  const parent = onOffCb.parentElement;
+  if(onOffCb.checked){
     parent.classList.add('active');
     recognition.start();
   } else{
@@ -37,7 +37,7 @@ onoffcb.addEventListener('click', () => {
 
 //音声認識機能が途切れたときに再開
 recognition.onend = function () {
-  if (toggleBottonClass.contains('active')) {
+  if (toggleButtonClass.contains('active')) {
     console.log('recognition restarted!');
     try {
       recognition.start();
@@ -71,3 +71,11 @@ recognition.onresult = (event) => {
     resultDiv.innerHTML += ` ${hpComponent.join(" ")}`; 
     hpComponent = [];
   }
+
+//Web Speech APIが使えない場合のエラー処理
+const errorDiv = document.getElementById('error');
+recognition.onerror = (event) => {
+  if(event.error == 'not-allowed'){
+    errorDiv.textContent = '音声認識が動作しない環境です。デスクトップPCのChromeブラウザでお試しください。';
+  }
+};

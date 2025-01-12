@@ -72,3 +72,8 @@ h1 {
   margin: 0;
   margin-bottom: 10px;
 }
+
+#error {
+  color: red;
+  padding: 5px;
+}
